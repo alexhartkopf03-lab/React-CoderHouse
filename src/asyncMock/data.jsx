@@ -118,6 +118,6 @@ export const fetchProductos = () => {
         } else {
             reject("Error: No se pudieron cargar los productos.");
         }
-    }, 1000);
+    }, 2000);
   });
 }
