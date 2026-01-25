@@ -13,10 +13,10 @@ const NavbarBotstrap = ()=>{
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#">A La Piedra</Nav.Link>
-            <Nav.Link href="#">Al Molde</Nav.Link>
-            <Nav.Link href="#">Napolitana</Nav.Link>
-            <Nav.Link href="#">Tradicional</Nav.Link>
+            <Nav.Link href="#">Almacen</Nav.Link>
+            <Nav.Link href="#">Lacteos</Nav.Link>
+            <Nav.Link href="#">Verduleria</Nav.Link>
+            <Nav.Link href="#">Ofertas</Nav.Link>
           </Nav>
           <CartWidget/>
         </Navbar.Collapse>
