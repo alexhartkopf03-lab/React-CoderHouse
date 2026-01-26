@@ -1,8 +1,8 @@
-import React from 'react'
+import '../css/Footer.css'
 
 const Footer = () => {
     return(
-        <footer style={{padding: '5px', textAlign: 'center', backgroundColor:'orange'}}>
+        <footer>
             <p>&copy; 2026 Tienda Online. Todos los derechos reservados.</p>
         </footer>
     )

@@ -17,3 +17,9 @@
     text-align: center;
     padding: 5px;
 }
+
+.contSpinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
