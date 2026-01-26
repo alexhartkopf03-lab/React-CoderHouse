@@ -121,3 +121,16 @@ export const fetchProductos = () => {
     }, 2000);
   });
 }
+
+export const fetchUnProducto = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if (!error) {
+          let busqueda = productos.find((prod)=>prod.id === id)
+            resolve(busqueda);
+        } else {
+            reject("Error: No se pudo cargar el producto.");
+        }
+    }, 2000);
+  });
+}
