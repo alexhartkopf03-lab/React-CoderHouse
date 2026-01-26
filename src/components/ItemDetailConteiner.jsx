@@ -14,8 +14,6 @@ const ItemDetailContainer = () => {
         .catch((error)=>console.log(error))
     },[id])
 
-    console.log(detalle)
-
     return(
         <div style={{padding:'20px', display: 'flex', justifyContent: 'center'}}>
             <ItemDetail detalle={detalle}/>
