@@ -1,14 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Item = ({ producto }) => {
+    const navegar = useNavigate()
     return (
-        <div style={{padding: "10px", width: "200px", textAlign: "center", borderRadius: "10px", boxShadow: "2px 2px 10px rgba(0,0,0,0.3)" }}>
-            <img src={producto.imagen} alt={producto.nombre} style={{ width: "150px", height: "150px" }} />
+        <div className='card' onClick={()=>navegar('/producto/'+producto.id)}>
+            <img src={producto.imagen} alt={producto.nombre}/>
             <p>{producto.nombre}</p>
-            <p style={{padding:"10px", backgroundColor:"red", color:"white", borderRadius:"5px", fontWeight: 'bold'}}>${producto.precio}</p>
+            <p className='precio'>${producto.precio}</p>
             <p>Stock: {producto.stock}</p>
-            <Link to={'/producto/'+producto.id}>Más informacion</Link>
         </div>
     )
 }

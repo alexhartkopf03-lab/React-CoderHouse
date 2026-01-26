@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { fetchUnProducto } from '../asyncMock/data'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
+import '../css/ItemDetailConteiner.css'
 
 const ItemDetailContainer = () => {
 
@@ -15,7 +16,7 @@ const ItemDetailContainer = () => {
     },[id])
 
     return(
-        <div style={{padding:'20px', display: 'flex', justifyContent: 'center'}}>
+        <div className='centerContDetail'>
             <ItemDetail detalle={detalle}/>
         </div>
     )

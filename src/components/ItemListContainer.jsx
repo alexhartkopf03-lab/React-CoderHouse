@@ -1,22 +1,30 @@
 import { useState, useEffect } from "react";
 import { fetchProductos } from "../asyncMock/data";
 import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = ({ Saludo }) => {
 
     const [productos, setProductos] = useState([])
+    const {tipo} = useParams()
 
     useEffect(() => {
         fetchProductos()
-            .then((data) => setProductos(data))
+            .then((data) => {
+                if (tipo){
+                    setProductos(data.filter((prod) => prod.categoria === tipo))
+                }else{
+                    setProductos(data)
+                }
+            })
             .catch((error) => console.log(error))
-    }, []) //useEffect que se ejecuta una sola vez al montar el componente
+    }, [tipo]) //useEffect que se ejecuta una sola vez al montar el componente y esta a la escucha de tipo
 
     return (
-        <div style={{padding:'10px'}}>
-            <h1 style={{textAlign: "center"}}>{Saludo}</h1>
+        <>
+            <h1 className="titulo">{Saludo} {tipo && <span>{tipo}</span>}</h1>
             <ItemList productos={productos} />
-        </div>
+        </>
     );
 };
 

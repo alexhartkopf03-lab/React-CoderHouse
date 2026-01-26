@@ -11,10 +11,11 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', minHeight:'100vh'}}>
+      <div className='contPrincipal'>
         <NavbarBotstrap/>
         <Routes>
           <Route path='/' element={<ItemListContainer Saludo="Bienvenido a nuestra tienda"/>}/>
+          <Route path='/categoria/:tipo' element={<ItemListContainer Saludo="Categoria seleccionada: "/>}/>
           <Route path='/producto/:id' element={<ItemDetailContainer/>} />
           <Route path='*' element={<Error/>}/>
         </Routes>

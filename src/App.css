@@ -1,0 +1,19 @@
+.contPrincipal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.precio{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.titulo{
+    text-align: center;
+    padding: 5px;
+}

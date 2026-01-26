@@ -1,0 +1,29 @@
+.contItems {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+.card {
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+}
+
+.card .precio{
+    font-size: 1.3rem;
+}
+
+.card:hover{
+    box-shadow: 2px 2px 10px rgba(53, 63, 210, 0.8);
+    cursor: pointer;
+}

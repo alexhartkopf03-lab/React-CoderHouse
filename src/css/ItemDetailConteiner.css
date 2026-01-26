@@ -1,0 +1,23 @@
+.centerContDetail {
+    display: flex;
+    justify-content: center;
+}
+
+.contItemDetail {
+    display: inline-flex;
+    gap: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    border-radius: 20px;
+}
+
+.contInfoItem {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contInfoItem .precio{
+    font-size: 2rem;
+}
