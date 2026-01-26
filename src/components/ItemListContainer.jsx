@@ -13,9 +13,8 @@ const ItemListContainer = ({ Saludo }) => {
     }, []) //useEffect que se ejecuta una sola vez al montar el componente
 
     return (
-        <div>
+        <div style={{padding:'10px'}}>
             <h1 style={{textAlign: "center"}}>{Saludo}</h1>
-            
             <ItemList productos={productos} />
         </div>
     );

@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { fetchUnProducto } from '../asyncMock/data'
 import ItemDetail from './ItemDetail'
+import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
 
     const [detalle, setDetalle] = useState({})
+    const {id} = useParams()
 
     useEffect(() => {
-        fetchUnProducto(6)
+        fetchUnProducto(id)
         .then((prod)=>setDetalle(prod))
         .catch((error)=>console.log(error))
-    },[])
+    },[id])
+
+    console.log(detalle)
 
     return(
         <div style={{padding:'20px', display: 'flex', justifyContent: 'center'}}>

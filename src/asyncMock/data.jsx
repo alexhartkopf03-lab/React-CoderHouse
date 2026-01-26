@@ -82,12 +82,12 @@ const productos = [
   },
   {
     id: 10,
-    nombre: "Galletitas Dulces Chocolate",
+    nombre: "Galletitas Dulces",
     descripcion: "Galletitas dulces rellenas sabor chocolate.",
     stock: 70,
     precio: 1200,
     categoria: "ofertas",
-    imagen: "https://static.cotodigital3.com.ar/sitios/fotos/large/00256900/00256999.jpg"
+    imagen: "https://static.cotodigital3.com.ar/sitios/fotos/large/00614100/00614155.jpg"
   },
   {
     id: 11,
@@ -126,7 +126,7 @@ export const fetchUnProducto = (id) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
         if (!error) {
-          let busqueda = productos.find((prod)=>prod.id === id)
+          let busqueda = productos.find((prod)=>prod.id == id)
             resolve(busqueda);
         } else {
             reject("Error: No se pudo cargar el producto.");
