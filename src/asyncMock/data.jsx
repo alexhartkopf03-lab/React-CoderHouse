@@ -84,7 +84,7 @@ const productos = [
     id: 10,
     nombre: "Galletitas Dulces",
     descripcion: "Galletitas dulces rellenas sabor chocolate.",
-    stock: 70,
+    stock: 8,
     precio: 1200,
     categoria: "ofertas",
     imagen: "https://static.cotodigital3.com.ar/sitios/fotos/large/00614100/00614155.jpg"

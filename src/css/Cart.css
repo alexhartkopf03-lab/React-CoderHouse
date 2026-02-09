@@ -1,0 +1,21 @@
+.contCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+table{
+    text-align: center;
+}
+
+.total {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.contBtns {
+    display: flex;
+    gap: 5px;
+}
