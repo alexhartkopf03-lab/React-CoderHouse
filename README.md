@@ -1,16 +1,28 @@
-# React + Vite
+# Super React Market
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un proyecto desarrollado con **react** para ayudar a dueños de supermercados a vender su productos de manera online facil y rapido.
 
-Currently, two official plugins are available:
+![Captura de pantalla muestra el diseño de la web](public/readme.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Herramientas utilizadas en la web
+- [React Botstrap v5.3.8](https://react-bootstrap.netlify.app/): Diseño y estilos.
+- [React Router Dom v7.13.0](https://reactrouter.com/): Navegacion y rutas.
+- [Firebase v12.9.0](https://console.firebase.google.com/): Base de datos.
 
-## React Compiler
+## Metodo de instalacion
+1. Clone el repositorio.
+´git clone https://github.com/alexhartkopf03-lab/React-CoderHouse.git´
+2. Abra la capeta del proyecto en su editor de codigo.
+3. En la terminal escriba el comando para instalar dependencias.
+´npm install´
+4. Nuevamente en la terminal escriba el comando para ejecutar el proyecto de manera local.
+´npm run dev´
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Es necesario contar con Node v24.12.0 para la utilización del proyecto.
 
-## Expanding the ESLint configuration
+## Versión Web
+Tambien puedo visualizar el proyecto de manera online sin descargar nada en el siguiente link:
+[SuperMarket Online](https://google.com)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Desarrollo
+El proyecto esta actualmente siendo desarrollado por Alex Hartkopf.
