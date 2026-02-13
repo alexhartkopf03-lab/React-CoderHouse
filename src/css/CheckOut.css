@@ -1,0 +1,15 @@
+.contCheckOut{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contCheckOut form{
+    width: 60vh;
+}
+
+.contCheckOut form input{
+    margin-bottom: 10px;
+}

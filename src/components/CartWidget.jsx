@@ -4,11 +4,11 @@ import Button from 'react-bootstrap/Button';
 import { CartContext } from '../context/CartContext';
 
 const CartWidget = () => {
-    // const {cant} = useContext(CartContext)
+    const {cantidad} = useContext(CartContext)
 
     return (
         <Button variant="success">
-            🛒Mi Carrito <Badge bg="primary">52</Badge>
+            🛒Mi Carrito <Badge bg="primary">{cantidad()}</Badge>
             <span className="visually-hidden">unread messages</span>
         </Button>
     );

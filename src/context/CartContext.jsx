@@ -39,12 +39,12 @@ export const CartProvider = ({ children }) => {
 
     //CALCULADOR DEL TOTAL DEL CARRITO
     const total = () => {
-
+        return cart.reduce((acm, prod)=> acm += (prod.cantidad*prod.precio), 0)
     }
 
     //CONTADOR DE CANTIDAD DE PRODUCTOS DEL CARRITO
     const cantidad = () => {
-
+        return cart.reduce((acm, prod)=> acm += prod.cantidad, 0)
     }
 
     return (

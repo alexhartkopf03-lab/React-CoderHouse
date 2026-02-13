@@ -8,6 +8,7 @@ import Footer from './components/footer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import CartContainer from './components/CartContainer';
+import CheckOut from './components/CheckOut';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
             <Route path='/categoria/:tipo' element={<ItemListContainer Saludo="Categoria seleccionada: "/>}/>
             <Route path='/producto/:id' element={<ItemDetailContainer/>} />
             <Route path='/cart' element={<CartContainer/>} />
+            <Route path='/checkout' element={<CheckOut/>} />
             <Route path='*' element={<Error/>}/>
           </Routes>
         </CartProvider>

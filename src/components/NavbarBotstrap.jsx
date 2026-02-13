@@ -4,12 +4,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from './CartWidget';
 import { NavLink } from 'react-router-dom';
 
-const NavbarBotstrap = ()=>{
+const NavbarBotstrap = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand as={NavLink} to={'/'}>
-          <img style={{height:'70px'}} src='../logo.png' alt='Logo' />
+          <img style={{ height: '70px' }} src='../logo.png' alt='Logo' />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -19,7 +19,9 @@ const NavbarBotstrap = ()=>{
             <Nav.Link as={NavLink} to={'/categoria/verduleria'}>Verduleria</Nav.Link>
             <Nav.Link as={NavLink} to={'/categoria/ofertas'}>Ofertas</Nav.Link>
           </Nav>
-          <CartWidget/>
+          <NavLink to={"/cart"}>
+            <CartWidget />
+          </NavLink>
         </Navbar.Collapse>
       </Container>
     </Navbar>
