@@ -11,12 +11,12 @@ Este es un proyecto desarrollado con **react** para ayudar a dueños de supermer
 
 ## Metodo de instalacion
 1. Clone el repositorio.
-´git clone https://github.com/alexhartkopf03-lab/React-CoderHouse.git´
+`git clone https://github.com/alexhartkopf03-lab/React-CoderHouse.git`
 2. Abra la capeta del proyecto en su editor de codigo.
 3. En la terminal escriba el comando para instalar dependencias.
-´npm install´
+`npm install`
 4. Nuevamente en la terminal escriba el comando para ejecutar el proyecto de manera local.
-´npm run dev´
+`npm run dev`
 
 > Es necesario contar con Node v24.12.0 para la utilización del proyecto.
 
