@@ -8,7 +8,7 @@ const ItemCount = ({ stock, onAdd }) => {
             setCounter(counter + 1)
         }
     }
-    
+
     const restar = () => {
         if (counter > 0) {
             setCounter(counter - 1)
@@ -16,12 +16,18 @@ const ItemCount = ({ stock, onAdd }) => {
     }
 
     return (
-        <div>
-            <button className="btn btn-danger" onClick={restar} disabled={counter === 0}>-</button>
-            <span className="btn">{counter}</span>
-            <button className="btn btn-success" onClick={sumar} disabled={counter === stock}>+</button>
-            <button className="btn btn-primary" onClick={() => onAdd(counter)} disabled={counter === 0 || stock === 0}>Comprar</button>
-        </div>
+        <>
+            {
+                stock > 0
+                    ? <div>
+                        <button className="btn btn-danger" onClick={restar} disabled={counter === 0}>-</button>
+                        <span className="btn">{counter}</span>
+                        <button className="btn btn-success" onClick={sumar} disabled={counter === stock}>+</button>
+                        <button className="btn btn-primary" style={{ marginLeft: "5px" }} onClick={() => onAdd(counter)} disabled={counter === 0 || stock === 0}>Comprar</button>
+                    </div>
+                    : <div></div>
+            }
+        </>
     )
 }
 

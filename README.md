@@ -8,6 +8,8 @@ Este es un proyecto desarrollado con **react** para ayudar a dueños de supermer
 - [React Botstrap v5.3.8](https://react-bootstrap.netlify.app/): Diseño y estilos.
 - [React Router Dom v7.13.0](https://reactrouter.com/): Navegacion y rutas.
 - [Firebase v12.9.0](https://console.firebase.google.com/): Base de datos.
+- [React Hook Form](https://react-hook-form.com/): Validacion de formularios.
+- [SeetAlert](https://sweetalert2.github.io/): Notificaciones tipo tostadas.
 
 ## Metodo de instalacion
 1. Clone el repositorio.
