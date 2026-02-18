@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react"
-import "../css/Checkout.css"
+import "../css/CheckOut.css"
 import { useForm } from "react-hook-form"
 import { CartContext } from "../context/CartContext"
 import { addDoc, collection, serverTimestamp } from "firebase/firestore"
