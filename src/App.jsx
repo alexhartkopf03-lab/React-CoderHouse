@@ -4,7 +4,7 @@ import NavbarBotstrap from './components/NavbarBotstrap';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailConteiner';
 import Error from './components/Error';
-import Footer from './components/footer';
+import Footer from './components/Footer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import CartContainer from './components/CartContainer';
