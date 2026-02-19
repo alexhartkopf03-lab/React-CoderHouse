@@ -14,7 +14,7 @@
     margin-top: 10px;
 }
 
-span {
+.contCheckOut form span {
     display: block;
     color: red;
     font-size: 0.75rem;
