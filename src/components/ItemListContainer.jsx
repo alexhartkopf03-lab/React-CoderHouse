@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-// import { fetchProductos } from "../asyncMock/data";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import SpinnerLoad from "./SpinnerLoad";
-import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
-import {db} from "../service/firebase"
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../service/firebase"
 
 const ItemListContainer = ({ Saludo }) => {
 
@@ -12,15 +11,14 @@ const ItemListContainer = ({ Saludo }) => {
     const [spinner, setSpinner] = useState(false)
     const { tipo } = useParams()
 
-//CONEXION A FIREBASE
     useEffect(() => {
         setSpinner(true)
         const prodCollections = tipo ? query(collection(db, "productos"), where("categoria", "==", tipo)) : collection(db, "productos")
         getDocs(prodCollections)
-            .then((res) => { //Trata la promesa
-                const list = res.docs.map((doc)=>{
-                    return{
-                        id:doc.id,
+            .then((res) => {
+                const list = res.docs.map((doc) => {
+                    return {
+                        id: doc.id,
                         ...doc.data()
                     }
                 })
@@ -28,22 +26,7 @@ const ItemListContainer = ({ Saludo }) => {
             })
             .catch((error) => console.log(error))
             .finally(() => setSpinner(false))
-    }, [tipo]) //useEffect que se ejecuta una sola vez al montar el componente y esta a la escucha de tipo
-
-//CONEXION CON PROMESA AL MOCK
-    // useEffect(() => {
-    //     setSpinner(true)
-    //     fetchProductos()
-    //         .then((data) => {
-    //             if (tipo) {
-    //                 setProductos(data.filter((prod) => prod.categoria === tipo))
-    //             } else {
-    //                 setProductos(data)
-    //             }
-    //         })
-    //         .catch((error) => console.log(error))
-    //         .finally(() => setSpinner(false))
-    // }, [tipo]) //useEffect que se ejecuta una sola vez al montar el componente y esta a la escucha de tipo
+    }, [tipo])
 
     if (spinner) {
         return (

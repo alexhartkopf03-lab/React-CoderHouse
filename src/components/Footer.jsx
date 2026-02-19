@@ -1,7 +1,7 @@
 import '../css/Footer.css'
 
 const Footer = () => {
-    return(
+    return (
         <footer>
             <p>&copy; 2026 Tienda Online. Todos los derechos reservados.</p>
         </footer>

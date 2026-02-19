@@ -25,7 +25,7 @@ const ItemCount = ({ stock, onAdd }) => {
                         <button className="btn btn-success" onClick={sumar} disabled={counter === stock}>+</button>
                         <button className="btn btn-primary" style={{ marginLeft: "5px" }} onClick={() => onAdd(counter)} disabled={counter === 0 || stock === 0}>Comprar</button>
                     </div>
-                    : <div></div>
+                    : <></>
             }
         </>
     )

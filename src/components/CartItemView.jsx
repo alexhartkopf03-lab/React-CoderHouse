@@ -4,7 +4,7 @@ const CartItemView = ({ producto, remove }) => {
     const subTotal = producto.precio * producto.cantidad
     return (
         <tr>
-            <td><img src={producto.imagen} alt={producto.nombre} style={{width:"100px"}}/></td>
+            <td><img src={producto.imagen} alt={producto.nombre} style={{ width: "100px" }} /></td>
             <td className="align-middle">{producto.nombre}</td>
             <td className="align-middle">${producto.precio}</td>
             <td className="align-middle">{producto.cantidad}</td>

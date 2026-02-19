@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { CartContext } from '../context/CartContext';
 
 const CartWidget = () => {
-    const {cantidad} = useContext(CartContext)
+    const { cantidad } = useContext(CartContext)
 
     return (
         <Button variant="success">

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { fetchUnProducto } from '../asyncMock/data'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
 import '../css/ItemDetailConteiner.css'
@@ -12,54 +11,45 @@ const ItemDetailContainer = () => {
     const [detalle, setDetalle] = useState({})
     const [spinner, setSpinner] = useState(true)
     const [invalid, setInvalid] = useState(false)
-    const {id} = useParams()
+    const { id } = useParams()
 
-//CONEXION CON FIREBASE
     useEffect(() => {
         const docRef = doc(db, "productos", id)
         getDoc(docRef)
-        .then((res)=>{
-            if(res.data()){
-               setDetalle({
-                id:res.id,
-                ...res.data()
-            }) 
-            }else{
-                setInvalid(true)
-            } 
-        })
-        .catch((error)=>console.log(error))
-        .finally(()=>setSpinner(false))
-    },[id]) 
+            .then((res) => {
+                if (res.data()) {
+                    setDetalle({
+                        id: res.id,
+                        ...res.data()
+                    })
+                } else {
+                    setInvalid(true)
+                }
+            })
+            .catch((error) => console.log(error))
+            .finally(() => setSpinner(false))
+    }, [id])
 
-//CONEXION CON EL MOCK
-    // useEffect(() => {
-    //     fetchUnProducto(id)
-    //     .then((prod)=>setDetalle(prod))
-    //     .catch((error)=>console.log(error))
-    //     .finally(()=>setSpinner(false))
-    // },[id])
-
-    if (spinner){
-        return(
+    if (spinner) {
+        return (
             <>
-               <SpinnerLoad/>
+                <SpinnerLoad />
             </>
         )
-    }else if(invalid){
-        return(
+    } else if (invalid) {
+        return (
             <>
-               <h2 style={{textAlign:"center"}}>Este producto no existe..</h2>
+                <h2 style={{ textAlign: "center" }}>Este producto no existe..</h2>
             </>
         )
-    }else{
-        return(
+    } else {
+        return (
             <div className='centerContDetail'>
-                <ItemDetail detalle={detalle}/>
+                <ItemDetail detalle={detalle} />
             </div>
         )
     }
-    
+
 }
 
 export default ItemDetailContainer

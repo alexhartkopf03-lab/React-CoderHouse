@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const EmptyCart = () => {
-    return(
+    return (
         <div className="contCart">
             <h2>Tu carrito esta vacio</h2>
             <Link className="btn btn-danger" to='/'>Ver Productos</Link>

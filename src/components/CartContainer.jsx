@@ -5,12 +5,11 @@ import EmptyCart from "./EmptyCart";
 import '../css/Cart.css'
 
 const CartContainer = () => {
-    const {cart} = useContext(CartContext)
-    console.log(cart)
+    const { cart } = useContext(CartContext)
 
-    return(
+    return (
         <>
-            {cart.length ? <CartView/> : <EmptyCart/>}
+            {cart.length ? <CartView /> : <EmptyCart />}
         </>
     )
 }

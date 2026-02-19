@@ -41,7 +41,7 @@ const CartView = () => {
                 </thead>
                 <tbody>
                     {cart.map((prod) => (
-                        <CartItemView key={prod.id} producto={prod} remove={removeItem}/>
+                        <CartItemView key={prod.id} producto={prod} remove={removeItem} />
                     ))}
                 </tbody>
             </table>

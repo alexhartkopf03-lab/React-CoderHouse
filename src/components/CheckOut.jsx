@@ -11,8 +11,8 @@ import { useNavigate } from "react-router-dom"
 const CheckOut = () => {
 
     const [process, setProcess] = useState(false)
-    const { register, handleSubmit, formState: { errors }, getValues, watch } = useForm()
-    const {cart, total, cleanCart} = useContext(CartContext)
+    const { register, handleSubmit, formState: { errors }, watch } = useForm()
+    const { cart, total, cleanCart } = useContext(CartContext)
     const navegar = useNavigate()
 
     const onSubmit = handleSubmit((data) => {
@@ -29,31 +29,29 @@ const CheckOut = () => {
         }
         const venta = collection(db, "pedidos")
         addDoc(venta, orden)
-        .then((res)=>{
-            cleanCart()
-            Swal.fire({
-                title:'¡Tu compra fue enviada con exito!',
-                text: `Orden ID: ${res.id}`,
-                icon: 'success',
-                confirmButtonText: 'Volver al Inicio'
-            }).then((res)=>{
-                if(res.isConfirmed) {
-                    navegar('/')
-                }
+            .then((res) => {
+                cleanCart()
+                Swal.fire({
+                    title: '¡Tu compra fue enviada con exito!',
+                    text: `Orden ID: ${res.id}`,
+                    icon: 'success',
+                    confirmButtonText: 'Volver al Inicio'
+                }).then((res) => {
+                    if (res.isConfirmed) {
+                        navegar('/')
+                    }
+                })
             })
-        })
-        .catch((error)=> {
-            console.log(error)
-            Swal.fire({
-                title:'Upsss...',
-                text: 'Hubo un error al enviar tu compra, por favor intente más tarde.',
-                icon: 'error'
+            .catch((error) => {
+                console.log(error)
+                Swal.fire({
+                    title: 'Upsss...',
+                    text: 'Hubo un error al enviar tu compra, por favor intente más tarde.',
+                    icon: 'error'
+                })
             })
-        })
-        .finally(()=>setProcess(false))
+            .finally(() => setProcess(false))
     })
-
-    console.log(errors)
 
     return (
         <div className="contCheckOut">
@@ -89,7 +87,6 @@ const CheckOut = () => {
 
                 <button className="btn btn-success" type="submit" disabled={process}>{process ? 'Enviando Pedido...' : 'Realizar Compra'}</button>
             </form>
-
         </div>
     )
 }
